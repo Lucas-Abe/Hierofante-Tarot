@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: #9B8FD1;
+    color: white;
+    font-family: 'Roboto', 'Cinzel Decorative', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    min-height: 100%;
+}
+
+/*Cabeçalho*/
+#container-cabecalho {
+    background-color: #502c54;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    position: sticky;
+    top: 0;
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 20px;
+}
+
+#logo-texto {
+    padding: 5px;
+    letter-spacing: 0.5px;
+}
+
+#logo-img {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+#logo-img img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: inherit;
+}
+
+/*Carrinho*/
+
+
+#logo-carrinho {
+    position: absolute;
+    right: 60px;
+    font-size: 1.2em;
+}
+
+#logo-carrinho button,
+#aba-carrinho button {
+    background-color: #3A1F3F;
+    border: none;
+    padding: 12px;
+    border-radius: 5px
+}
+
+#aba-carrinho button#desativar-carrinho {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    font-size: 1.2em;
+}
+
+#logo-carrinho button:hover,
+#aba-carrinho button:hover {
+    background-color: #5C355F;
+}
+
+#aba-carrinho {
+    position: fixed;
+    top: 10px;
+    right: -500px;
+    background-color: #673B6B;
+    width: 500px;
+    height: 570px;
+    padding: 15px;
+    resize: both;
+    overflow: hidden;
+    min-height: 400px;
+    min-width: 500px;
+    max-height: 570px;
+}
+
+#aba-carrinho i,
+#logo-carrinho i {
+    color: white;
+}
+
+.mostrar-carrinho {
+    animation: mostrarCarrinho 0.5s forwards;
+}
+
+.ocultar-carrinho{
+    animation: ocultarCarrinho 0.5s forwards;
+}
+
+/*Animação carrinho*/
+
+@keyframes mostrarCarrinho {
+    from {
+        right: -500px;
+    }
+
+    to {
+        right: 20px;
+    }
+}
+
+@keyframes ocultarCarrinho {
+    from {
+        right: 40px;
+    }
+
+    to {
+        right: -500px;
+    }
+}
+
+#container-lista-carrinho {
+    border: 1px solid white;
+    height: 405px;
+    overflow: scroll;
+}
+
+#lista-carrinho li {
+    margin-top: 10px;
+}
+
+#enviar-mensagem {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#enviar-mensagem button {
+    text-decoration: none;
+    background: none;
+    border: 1px solid black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#enviar-mensagem button:hover {
+    background: white;
+    color: black;
+}
+
+/*Seção principal do site*/
+
+/*Primeira seção*/
+
+#primeira-secao {
+    display: flex;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 40%, #101c2c 10%);
+    max-width: 1433px;
+    min-width: 1257px;
+    height: 485px;
+}
+
+#image-descricao {
+    width: 49%;
+    height: 700px;
+    transform: translateY(-215px);
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0) 90%, #101c2c),
+        /* camada do degradê */
+        url("../image/side-view-woman-holding-flashlight.png") no-repeat;
+    /* camada da imagem */
+    filter: hue-rotate(340deg);
+}
+
+#image-descricao img {
+    width: 100%;
+}
+
+#texto-apresentacao {
+    width: 30%;
+    padding: 5px;
+    padding-top: 85px;
+}
+
+#texto-apresentacao h1 {
+    font-style: italic;
+}
+
+#texto-apresentacao p {
+    width: 95%;
+    font-size: 20px;
+}
+
+#link-consultas input,
+#link-carrinho input {
+    margin-top: 20px;
+    color: white;
+    background: none;
+    width: 40%;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 10px;
+    list-style-type: none;
+}
+
+#link-consultas input:hover,
+#link-carrinho input:hover {
+    background: white;
+    color: black;
+}
+
+/*Segunda seção*/
+
+#segunda-secao {
+    background: black;
+    height: 400px;
+}
+
+.carousel-item {
+    margin-top: 3%;
+}
+
+.carousel-descricao {
+    width: 45%;
+    margin-left: 15%;
+    margin-top: 2%;
+}
+
+.carousel-descricao li {
+    margin-top: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border-radius: 50%;
+    background-color: #35343a;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    content: "";
+    position: absolute;
+    top: 170px;
+    left: 50px;
+    right: 50px;
+    bottom: 170px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+.carousel {
+    height: 100%;
+}
+
+/*Terceira seção*/
+
+#terceira-secao {
+    margin-bottom: 20px;
+}
+
+.consultas-descricao {
+    width: 950px;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+.preco-consultas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.consulta-tipo {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.consulta-imagem {
+    border: 1px solid red;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.consulta-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#imagem-consultaesp {
+    transform: scale(1.39);
+    background: black;
+}
+
+#imagem-consultapart {
+    background-color: #c19fdc;
+}
+
+#imagem-reiki {
+    object-fit: cover;
+}
+
+#imagem-caldeirao {
+    object-fit: cover;
+}
+
+#imagem-pendulo {
+    object-fit: cover;
+}
+
+.consulta-descricao h4 {
+    margin-top: 10px;
+}
+
+.consulta-descricao p {
+    font-size: 0.8em;
+}
+
+.consulta-preco {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.preco-por {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.preco-por-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.preco-por-2 p {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.consulta-preco div h1,
+.consulta-preco-tipo2 div h1 {
+    font-size: 4em;
+    margin-left: 2px;
+}
+
+.consulta-preco-tipo2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid lightgray;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 49%;
+}
+
+.consulta-preco-tipo2:has(input[type="radio"]:checked) {
+    border-color: #000;
+}
+
+.tipo2-tipo {
+    align-self: flex-end;
+}
+
+h5 {
+    margin-bottom: 0;
+}
+
+.consulta-preco-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.consulta-preco-display div {
+    height: 70px;
+}
+
+.botao-comprar,
+.botao-comprar-tipo2 {
+    margin-top: 10px;
+}
+
+.botao-comprar button,
+.botao-comprar-tipo2 button {
+    text-decoration: none;
+    background: none;
+    border: 1px solid black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.botao-comprar-tipo2 button {
+    border: none;
+}
+
+.botao-comprar button:hover {
+    background-color: blue;
+}
+
+.botao-comprar-tipo2 button {
+    background: #d6d7d6;
+}
+
+.botao-comprar-tipo2 button.botao-ativo {
+    border: 1px solid black;
+    background: blue;
+}
+
+.consulta-preco-divisao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tipo2-extensao {
+    display: none;
+    padding-left: 20px;
+}
+
+.tipo2-extensao.ativo {
+    display: block;
+}
+
+.tipo2-extensao p {
+    margin: 0;
+    text-align: left;
+}
+
+.tipo2-extensao-opcoes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tipo2-opcao {
+    display: inline;
+    min-width: 45%;
+    text-align: left;
+}
+
+/*Quarta seção*/
+
+#quarta-secao {
+    background-color: #6A5ACD;
+    overflow: auto;
+}
+
+#contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contato h5 {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.contato a {
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+.contato i {
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+
+footer #copyright {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+footer #copyright span {
+    border-top: 3px solid lightslategrey;
+    padding-top: 5px;
+}

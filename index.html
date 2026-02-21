@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Hieromundo Tarot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://kit.fontawesome.com/c595222d0e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container-site">
+
+        <header id="container-cabecalho">
+
+            <div id="logo">
+
+                <div id="logo-img">
+                    <img src="assets/image/hieromundo.jpeg" alt="">
+                </div>
+
+                <div id="logo-texto">
+                    <span>Hieromundo
+                    </span>
+                    <br>
+                    <span>Tarot</span>
+                </div>
+
+            </div>
+
+            <div id="logo-carrinho">
+                <button id="ativar-carrinho"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+
+            <aside id="aba-carrinho">
+                <h1>Carrinho</h1>
+                <button id="desativar-carrinho"><i class="fa-solid fa-cart-shopping"></i></button>
+
+                <div id="container-lista-carrinho">
+
+                    <ul id="lista-carrinho">
+                    </ul>
+
+                </div>
+
+                <div id="enviar-mensagem">
+                    <button id="botao-carrinho">Mandar no WhatsApp</button>
+                </div>
+            </aside>
+
+        </header>
+
+        <main id="apresentacao-site">
+
+            <section class="secao-site">
+
+                <div id="primeira-secao">
+
+                    <div id="image-descricao"></div>
+
+                    <div id="texto-apresentacao">
+                        <h1>Precisa de uma luz?</h1>
+                        <p>Bem-vindo ao Hieromundo Tarot, faremos o nosso melhor para te ajudar com sua dúvida,
+                            problema, ou
+                            o que precisar.</p>
+
+                        <h6>Consultas com Danielly de Oliveira de Melo</h6>
+
+                        <a href="#consultas" id="link-consultas">
+                            <input type="button" value="Consultas">
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="secao-site">
+
+                <div id="segunda-secao">
+
+                    <div id="carrossel-consultas" class="carousel slide" data-bs-ride="carousel"
+                        data-bs-interval="30000">
+                        <div class="carousel-indicators">
+                            <button data-bs-target="#carrossel-abas" data-bs-slide-to="0" class="active"></button>
+                            <button data-bs-target="#carrossel-abas" data-bs-slide-to="1"></button>
+                            <button data-bs-target="#carrossel-abas" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+
+                                <div class="carousel-descricao">
+
+                                    <h1> <i>Sobre o Hieromundo Tarot</i> </h1>
+                                    <p>Sou uma profissional com muita experiência em diferentes campos, tendo um ótimo
+                                        retorno com todas as pessoas que fizeram consulta comigo!</p>
+                                    <p>
+                                        Realizo diversos serviços, foco em leituras de tarot, mas também pratico reiki,
+                                        queima no caldeirão, apometria e outras terapias holísticas!
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-descricao">
+
+                                    <h1> <i>Como funciona?</i> </h1>
+                                    <p>Selecione as consultas que possui interesse e as adicione ao carrinho. Após
+                                        adicionar
+                                        todas, clique no botão final para enviar uma mensagem e conversarmos no WhatsApp
+                                        sobre!</p>
+                                    <p>
+                                        Terei o maior carinho e atenção para fazer o melhor serviço para você sair com
+                                        satisfação.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-descricao">
+
+                                    <h1> <i>O que você pode esperar do atendimento?</i> </h1>
+                                    <ul>
+                                        <li>Consulta com total sigilo e respeito.</li>
+                                        <li>Leituras com sinceridade e clareza.</li>
+                                        <li>Orientação focada para seu estado atual e futuro.</li>
+                                        <li>Um espaço que você pode falar o que quiser sem medo.</li>
+                                        <li>Total atenção e segurança ao cliente.</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" href="#carrossel-consultas"
+                                role="button" data-bs-slide="prev"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+
+                        <a class="carousel-control-next">
+                            <span class="carousel-control-next-icon" aria-hidden="true" href="#carrossel-consultas"
+                                role="button" data-bs-slide="next"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="secao-site" id="consultas">
+
+                <div id="terceira-secao">
+
+                    <div class="consultas-descricao">
+
+                        <h1> <i>Consultas</i> </h1>
+
+                        <div class="preco-consultas">
+
+                            <!--Pergunta objetiva-->
+
+                            <div class="consulta-tipo">
+
+                                <div class="consulta-imagem" style="background: #efb120;">
+                                    <img src="assets/image/the_fool.jpg" alt="" id="imagem-perguntaobj">
+                                </div>
+
+                                <div class="consulta-descricao">
+                                    <h4>Pergunta Objetiva</h4>
+                                    <p>
+                                        Perguntas sobre o tema que desejar!
+                                    </p>
+
+                                </div>
+
+                                <div class="consulta-preco">
+                                    <div class="preco-por">
+                                        por
+                                        <br>
+                                        R$
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <h1>10</h1>
+                                    </div>
+                                    <div>
+                                        <h6>,00</h6>
+                                    </div>
+                                </div>
+
+                                <div class="botao-comprar">
+                                    <button id="carrinho_pergobj" value="Pergunta Objetiva">Adicionar ao
+                                        carrinho</button>
+                                </div>
+
+                            </div>
+
+                            <!--Pergunta especial-->
+
+                            <div class="consulta-tipo">
+
+                                <div class="consulta-imagem">
+                                    <img src="assets/image/heart-1137259_640.jpg" alt="" id="imagem-consultaesp">
+                                </div>
+
+                                <div class="consulta-descricao">
+                                    <h4>Perguntas especiais</h4>
+                                    <p>
+                                        Perguntas sobre sentimentos, pensamentos, o que ele (a) esconde de você. Como
+                                        vai
+                                        ser sua semana/mês, etc.
+                                    </p>
+
+                                </div>
+
+                                <div class="consulta-preco-divisao">
+
+                                    <label class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="pergunta_esp" id="uni_esp"
+                                                value="Pergunta Especial - Simples">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>SIMPLES</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>25</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </label>
+
+                                    <label class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="pergunta_esp" id="combo_esp"
+                                                value="Pergunta Especial - Completa">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>COMPLETA</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>35</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </label>
+
+                                </div>
+
+                                <div class="botao-comprar-tipo2">
+                                    <button id="carrinho_pergesp" disabled>Adicionar ao carrinho</button>
+                                </div>
+
+                            </div>
+
+                            <!--Consulta particular-->
+
+                            <div class="consulta-tipo">
+
+                                <div class="consulta-imagem">
+                                    <img src="assets/image/fortune-teller.png" alt="" id="imagem-consultapart">
+                                </div>
+
+                                <div class="consulta-descricao">
+                                    <h4>Consulta particular</h4>
+                                    <p>
+                                        Todas as perguntas que você conseguir fazer por chamada de vídeo.
+                                    </p>
+
+                                </div>
+
+                                <div class="consulta-preco-divisao">
+
+                                    <label class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="consulta_part" id="consulta_30"
+                                                value="Consulta particular - 30 minutos">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>30 minutos</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>40</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </label>
+
+                                    <div class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="consulta_part" id="consulta_60"
+                                                value="Consulta particular - 1 hora">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>1 hora</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>60</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="botao-comprar-tipo2">
+                                    <button data-descricao="Consulta Particular" id="carrinho_consulta_part"
+                                        disabled>Adicionar ao carrinho</button>
+                                </div>
+
+                            </div>
+
+                            <!--Oráculo-->
+
+                            <div class="consulta-tipo">
+
+                                <div class="consulta-imagem">
+                                    <img src="assets/image/Oraculo-3.png" alt="" id="imagem-oraculo">
+                                </div>
+
+                                <div class="consulta-descricao">
+                                    <h4>Oráculo</h4>
+                                    <p>
+                                        Canalizamos energia oferecendo orientações sobre o presente ou futuro através do
+                                        espelho de seu espírito e mente.
+                                    </p>
+
+                                </div>
+
+                                <div class="consulta-preco-divisao" id="tipo2-oraculo">
+
+                                    <div class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="pergunta_oraculo" id="uni_oraculo"
+                                                value="Oráculo - Unidade">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>UNIDADE</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>5</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="pergunta_oraculo" id="combo_oraculo"
+                                                value="Oráculo - Combo">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>COMBO</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>12</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tipo2-extensao" id="extensao_oraculo">
+                                        <p> <b>Selecione sua opção</b></p>
+
+                                        <div class="tipo2-extensao-opcoes">
+
+                                            <div class="tipo2-opcao">
+                                                <input type="checkbox" name="" id="fad_rep" class="opcao-oraculo"
+                                                    value="Fadas + respostas"><label for="">Fadas + respostas</label>
+                                            </div>
+
+                                            <div class="tipo2-opcao">
+                                                <input type="checkbox" name="" id="love_fad" class="opcao-oraculo"
+                                                    value="Amor + fadas"><label for="">Amor + fadas</label>
+                                            </div>
+
+
+                                            <div class="tipo2-opcao">
+                                                <input type="checkbox" name="" id="arq_fad" class="opcao-oraculo"
+                                                    value="Arquétipos + fadas"><label for="">Arquétipos + fadas</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="botao-comprar-tipo2">
+                                    <button data-descricao="Oráculo" id="carrinho_oraculo" disabled>Adicionar ao
+                                        carrinho</button>
+                                </div>
+
+                            </div>
+
+                            <!--Envio de reiki-->
+
+                            <div class="consulta-tipo">
+
+                                <div class="consulta-imagem">
+                                    <img src="assets/image/REIKI-640.jpg" alt="" id="imagem-reiki">
+                                </div>
+
+                                <div class="consulta-descricao">
+                                    <h4>Envio de reiki</h4>
+                                    <p>
+                                        Envio de energia espiritual para estabilização
+                                        do corpo físico, mental, emocioanl e espiritual.
+                                    </p>
+
+                                </div>
+
+                                <div class="consulta-preco-divisao">
+
+                                    <label class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="reiki" id="reiki_1d" value="Reiki - 1 dia">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>1 dia</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>15</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </label>
+
+                                    <div class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="reiki" id="reiki_10d" value="Reiki - 10 dias">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>10 dias</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1 style="font-size: 2.7em; padding-top: 20px;">100</h1>
+                                            </div>
+                                            <div>
+                                                <h6 style="padding-top: 20px;">,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="botao-comprar-tipo2">
+                                    <button data-descricao="Reiki" id="carrinho_reiki" disabled>Adicionar ao
+                                        carrinho</button>
+                                </div>
+
+                            </div>
+
+                            <!--Abertura de caminhos-->
+
+                            <div class="consulta-tipo">
+
+                                <div class="consulta-imagem">
+                                    <img src="assets/image/key.png" alt="" id="imagem-abcaminho">
+                                </div>
+
+                                <div class="consulta-descricao">
+                                    <h4>Abertura de caminhos</h4>
+                                    <p>
+                                        Remoção de obstáculos, atração de novas oportunidades e
+                                        purificação de energias negativas.
+                                    </p>
+
+                                </div>
+
+                                <div class="consulta-preco-divisao">
+
+                                    <div class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="abcaminho" id="uni_abcaminho"
+                                                value="Abertura de caminhos - Unidade">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>UNIDADE</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>35</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="abcaminho" id="combo_abcaminho"
+                                                value="Abertura de caminhos - Combo">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>COMBO</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1 style="font-size: 2.7em; padding-top: 20px;">120</h1>
+                                            </div>
+                                            <div>
+                                                <h6 style="padding-top: 20px;">,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tipo2-extensao" id="extensao_abcaminho">
+                                        <p> <b>Selecione sua opção</b></p>
+
+                                        <div class="tipo2-extensao-opcoes">
+
+                                            <div class="tipo2-opcao">
+                                                <input type="checkbox" name="" id="abcaminho_amor"
+                                                    class="opcao-abcaminho" value="Amor"><label for="">Amor</label>
+                                            </div>
+
+                                            <div class="tipo2-opcao">
+                                                <input type="checkbox" name="" id="abcaminho_financeiro"
+                                                    class="opcao-abcaminho" value="Financeiro"><label
+                                                    for="">Financeiro</label>
+                                            </div>
+
+
+                                            <div class="tipo2-opcao">
+                                                <input type="checkbox" name="" id="abcaminho_espiritual"
+                                                    class="opcao-abcaminho" value="Espiritual"><label
+                                                    for="">Espiritual</label>
+                                            </div>
+
+                                            <div class="tipo2-opcao">
+                                                <input type="checkbox" name="" id="abcaminho_protecao"
+                                                    class="opcao-abcaminho" value="Proteção"><label
+                                                    for="">Proteção</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="botao-comprar-tipo2">
+                                    <button data-descricao="Abertura de caminhos" id="carrinho_abcaminho"
+                                        disabled>Adicionar
+                                        ao carrinho</button>
+                                </div>
+
+                            </div>
+
+                            <!--Velas personalizadas-->
+
+                            <div class="consulta-tipo">
+
+                                <div class="consulta-imagem">
+                                    <img src="assets/image/candle-3735379_640.png" alt="" id="imagem-vela">
+                                </div>
+
+                                <div class="consulta-descricao">
+                                    <h4>Vela personalizada</h4>
+                                    <p>
+                                        Crio uma vela no dia com tudo que você precisa para
+                                        resolver sua questão.
+                                    </p>
+
+                                </div>
+
+                                <div class="consulta-preco">
+
+                                    <div class="preco-por">
+                                        por
+                                        <br>
+                                        R$
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <h1>20</h1>
+                                    </div>
+                                    <div>
+                                        <h6>,00</h6>
+                                    </div>
+
+                                </div>
+
+                                <div class="botao-comprar">
+                                    <button data-descricao="Vela personalizada" id="carrinho_vela"
+                                        value="Vela personalizada">Adicionar ao carrinho</button>
+                                </div>
+
+                            </div>
+
+                            <!--Queima caldeirão-->
+
+                            <div class="consulta-tipo">
+
+                                <div class="consulta-imagem">
+                                    <img src="assets/image/mystery-2730917_960_720-Pixabay.jpg" alt=""
+                                        id="imagem-caldeirao">
+                                </div>
+
+                                <div class="consulta-descricao">
+                                    <h4>Queima no caldeirão</h4>
+                                    <p>
+                                        Tudo que quiser retirar de sua vida ou limpar,
+                                        o caldeirão queimará e fará uma limpeza completa
+                                        para você.
+                                    </p>
+
+                                </div>
+
+                                <div class="consulta-preco">
+
+                                    <div class="preco-por">
+                                        por
+                                        <br>
+                                        R$
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <h1>15</h1>
+                                    </div>
+                                    <div>
+                                        <h6>,00</h6>
+                                    </div>
+
+                                </div>
+
+                                <div class="botao-comprar">
+                                    <button data-descricao="Queima no caldeirão" id="carrinho_caldeirao"
+                                        value="Queima no caldeirão">Adicionar ao carrinho</button>
+                                </div>
+
+                            </div>
+
+                            <!--Pêndulo-->
+
+                            <div class="consulta-tipo">
+
+                                <div class="consulta-imagem">
+                                    <img src="assets/image/pendulo.png" alt="" id="imagem-pendulo">
+                                </div>
+
+                                <div class="consulta-descricao">
+                                    <h4>Pêndulo</h4>
+                                    <p>
+                                        Identificar desequilíbrios em chakras, medir seu equilíbrio
+                                        energético e obtenção de respostas.
+                                    </p>
+
+                                </div>
+
+                                <div class="consulta-preco-divisao">
+
+                                    <label class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="pendulo" id="pendulo_sn"
+                                                value="Pêndulo - Pergunta sim ou não">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>Pergunta sim ou não</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>5</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </label>
+
+                                    <div class="consulta-preco-tipo2">
+
+                                        <div class="tipo2-tipo">
+                                            <input type="radio" name="pendulo" id="pendulo_alinchakra"
+                                                value="Pêndulo - Alinhamento de chakras">
+                                        </div>
+                                        <div class="tipo2-titulo">
+                                            <h5>Alinhamento chakras</h5>
+                                        </div>
+
+                                        <div class="consulta-preco-display">
+                                            <div class="preco-por-2">
+                                                <p>
+                                                    por
+                                                </p>
+                                                <p>
+                                                    R$
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1>20</h1>
+                                            </div>
+                                            <div>
+                                                <h6>,00</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="botao-comprar-tipo2">
+                                    <button data-descricao="Pêndulo" id="carrinho_pendulo" disabled>Adicionar ao
+                                        carrinho</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+
+        </main>
+
+        <footer class="secao-site">
+
+            <div id="quarta-secao">
+
+                <div id="contato-container">
+
+                    <div class="contato" id="horario-atendimento">
+                        <h5>Horário de atendimento:</h5>
+                        <h6>Seg a Dom.</h5>
+                            <h6>Das 10 horas às 18 horas</h6>
+
+                    </div>
+
+                    <div class="contato" id="redes-sociais">
+                        <h5>Redes sociais</h5>
+                        <a href="https://www.tiktok.com/@hieromundo_tarot?is_from_webapp=1&sender_device=pc"
+                            class="link-contato">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                        <a href="https://w.app/hierofantetarot" class="link-contato">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+
+                    <div class="contato" id="contato-enderecos">
+                        <h5>Contato</h5>
+
+                        <span>danyfiresouls@gmail.com</span>
+                        <br>
+                        <span>+55 (61) 98182-5914</span>
+
+                    </div>
+
+                </div>
+
+                <p id="copyright">
+                    <span>Hieromundo Tarot&copy; - 2026 - Todos os direitos reservados</span>
+                </p>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
