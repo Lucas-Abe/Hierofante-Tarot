@@ -15,6 +15,7 @@ const pendulo_alinchakra = document.getElementById('pendulo_alinchakra');
 const uni_oraculo = document.getElementById('uni_oraculo');
 const combo_oraculo = document.getElementById('combo_oraculo');
 const checkboxesOraculo = document.querySelectorAll('.opcao-oraculo');
+let cardEscolhidoAnteriormente = null;
 
 //Loop onde constantemente verifica os checkboxes, decidindo qual opção deixar disponível dependendo dos checkboxes atualmente escolhidos.
 for (let i = 0; i < checkboxesOraculo.length; i++) {
@@ -49,14 +50,40 @@ const carrinho_caldeirao = document.getElementById('carrinho_caldeirao');
 //Variável essencial para a lógica de desmarcar as checkboxes quando trocar da opção "Combo" para "Unidade".
 let controle_troca = 0;
 
-uni_esp.addEventListener('click', () => liberarBotaoCarrinho('carrinho_pergesp'));
-combo_esp.addEventListener('click', () => liberarBotaoCarrinho('carrinho_pergesp'));
+uni_esp.addEventListener('click', () => {
+    resetarTodosCards();
+    liberarBotaoCarrinho('carrinho_pergesp');
+});
 
-consulta_30.addEventListener('click', () => liberarBotaoCarrinho('carrinho_consulta_part'));
-consulta_60.addEventListener('click', () => liberarBotaoCarrinho('carrinho_consulta_part'));
+combo_esp.addEventListener('click', () => {
+    resetarTodosCards();
+    liberarBotaoCarrinho('carrinho_pergesp');
+});
 
-reiki_1d.addEventListener('click', () => liberarBotaoCarrinho('carrinho_reiki'));
-reiki_10d.addEventListener('click', () => liberarBotaoCarrinho('carrinho_reiki'));
+consulta_30.addEventListener('click', () => {
+    resetarTodosCards();
+    liberarBotaoCarrinho('carrinho_consulta_part');
+});
+
+consulta_60.addEventListener('click', () => {
+    resetarTodosCards();
+    liberarBotaoCarrinho('carrinho_consulta_part');
+});
+
+reiki_1d.addEventListener('click', () => {
+    resetarTodosCards();
+    liberarBotaoCarrinho('carrinho_reiki');
+});
+
+reiki_10d.addEventListener('click', () => {
+    resetarTodosCards();
+    liberarBotaoCarrinho('carrinho_reiki');
+});
+
+pendulo_sn.addEventListener('click', () => {
+    resetarTodosCards();
+    liberarBotaoCarrinho('carrinho_pendulo');
+});
 
 pendulo_sn.addEventListener('click', () => liberarBotaoCarrinho('carrinho_pendulo'));
 pendulo_alinchakra.addEventListener('click', () => liberarBotaoCarrinho('carrinho_pendulo'));
@@ -75,22 +102,22 @@ Tipo_carrinho é o carrinho específico de cada card
 E tipo_checkbox gera as checkboxes específicas a um card.
 */
 function liberarOpcoes(escolha, lista_opcoes, tipo_carrinho, tipo_checkbox) {
-    document.getElementById(lista_opcoes).classList.add('ativo');
+    resetarTodosCards();
+
 
     //Se a opção escolhida for algum combo
     if (escolha.includes('combo')) {
-
+        document.getElementById(lista_opcoes).classList.add('ativo');
         //Marque todas as checkboxes
         for (let i = 0; i < tipo_checkbox.length; i++) {
             tipo_checkbox[i].checked = true;
-            controle_troca++;
         }
-
+        controle_troca = 1;
         //E libere o carrinho na opção Combo
         liberarBotaoCarrinho(tipo_carrinho);
     }
     else {
-
+        document.getElementById(lista_opcoes).classList.add('ativo');
         //Se combo ter sido escolhido antes, depois ter trocado para Unidade
         if (controle_troca > 0) {
 
@@ -107,10 +134,10 @@ function liberarOpcoes(escolha, lista_opcoes, tipo_carrinho, tipo_checkbox) {
 
 //Função que libera o botão de carrinho a ser clicado. Recebe como parâmetro o tipo do carrinho de cada card a ser liberado.
 function liberarBotaoCarrinho(tipo_carrinho) {
+
     document.getElementById(tipo_carrinho).disabled = false;
     document.getElementById(tipo_carrinho).classList.add('botao-ativo');
 }
-
 //Função que deixa o carrinho indisponível para ser clicado. 
 function travaCarrinho(tipo_carrinho) {
     document.getElementById(tipo_carrinho).disabled = true;
@@ -168,6 +195,20 @@ function ocultarCarrinho() {
 
     aba_carrinho.classList.remove('mostrar-carrinho');
     aba_carrinho.classList.add('ocultar-carrinho');
+}
+
+function resetarTodosCards() {
+    const botoes = document.querySelectorAll('.botao-comprar button, .botao-comprar-tipo2 button');
+    for (let i = 0; i < botoes.length; i++) {
+        botoes[i].classList.remove('botao-ativo');
+        botoes[i].disabled = true;
+    }
+
+    const extensoes = document.querySelectorAll('.tipo2-extensao');
+    for (let i = 0; i < extensoes.length; i++) {
+        extensoes[i].classList.remove('ativo');
+    }
+
 }
 
 const carrinho = [];
