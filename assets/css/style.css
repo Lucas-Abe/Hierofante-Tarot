@@ -116,13 +116,13 @@ html {
     }
 
     to {
-        right: 20px;
+        right: calc((100vw - 1433px) / 2 + 60px);
     }
 }
 
 @keyframes ocultarCarrinho {
     from {
-        right: 40px;
+        right: calc((100vw - 1433px) / 2 + 60px);
     }
 
     to {
@@ -145,6 +145,11 @@ html {
 
 #lista-carrinho li {
     margin-top: 10px;
+}
+
+#lista-carrinho{
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 #enviar-mensagem {
