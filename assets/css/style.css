@@ -132,7 +132,14 @@ html {
     border: 1px solid white;
     height: 405px;
     overflow: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
+
+#container-lista-carrinho::-webkit-scrollbar {
+    display: none; 
+}
+
 
 #lista-carrinho li {
     margin-top: 10px;
@@ -383,7 +390,7 @@ html {
     width: 49%;
 }
 
-.consulta-preco-tipo2:has(input[type="radio"]:checked) {
+.consulta-preco-tipo2:has([type="radio"]:checked) {
     border-color: #000;
 }
 

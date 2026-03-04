@@ -15,6 +15,34 @@ for (let i = 0; i < botoes_opcao.length; i++) {
 
     botoes_opcao[i].addEventListener('click', function () {
         let card = this.closest('.consulta-tipo');
+        let radioSelecionado = this;
+
+        if(radioSelecionado.checked){
+            if(radioSelecionado.dataset.wasChecked){
+                radioSelecionado.checked = false;
+                delete radioSelecionado.dataset.wasChecked;
+                
+                let botao = card.querySelector('button');
+                if(botao) travaCarrinho(botao);
+
+                let checkboxes = card.querySelectorAll('input[type="checkbox"]')
+                checkboxes.forEach(cb => cb.checked = false)
+
+                const lista_checkboxes = card.querySelector('.tipo2-extensao');
+                if (lista_checkboxes) lista_checkboxes.classList.remove('ativo');
+
+                return;
+            }
+            else{
+                radioSelecionado.dataset.wasChecked = true;
+            }
+        }
+
+        let radiosNoCard = card.querySelectorAll('input[type="radio"]')
+        radiosNoCard.forEach(r => {
+            if(r !== radioSelecionado) delete r.dataset.wasChecked;
+        });
+
         resetarTodosCards(card);
 
         let lista_checkboxes = card.querySelector('.tipo2-extensao');
