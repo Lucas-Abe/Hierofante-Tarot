@@ -1,8 +1,11 @@
-//TODO: adicionar lógica para "despressionar" as opções de cada card.
 
+//Seleciona todos os botões dos cards de 1 opção apenas.
 const botao_carrinhos_tipo1 = document.querySelectorAll('.botao-comprar button');
 
+//Seleciona o card de todas as opções.
 const botoes_opcao = document.querySelectorAll('input[type="radio"]');
+
+
 //Lógica para resetar todos os cards quando for selecionada uma opção de apenas 1 card.
 for (let i = 0; i < botao_carrinhos_tipo1.length; i++) {
     botao_carrinhos_tipo1[i].addEventListener('click', function () {
@@ -11,10 +14,41 @@ for (let i = 0; i < botao_carrinhos_tipo1.length; i++) {
     })
 }
 
+//Lógica para "des-pressionar" um radio e resetar card mais elaborados se necessário
 for (let i = 0; i < botoes_opcao.length; i++) {
 
     botoes_opcao[i].addEventListener('click', function () {
         let card = this.closest('.consulta-tipo');
+        let radioSelecionado = this;
+
+        if (radioSelecionado.checked) {
+            if (radioSelecionado.dataset.wasChecked) {
+                radioSelecionado.checked = false;
+                delete radioSelecionado.dataset.wasChecked;
+
+                let botao = card.querySelector('button');
+                if (botao) {
+                    travaCarrinho(botao);
+                }
+
+                let checkboxes = card.querySelectorAll('input[type="checkbox"]')
+                checkboxes.forEach(cb => cb.checked = false)
+
+                const lista_checkboxes = card.querySelector('.tipo2-extensao');
+                if (lista_checkboxes) lista_checkboxes.classList.remove('ativo');
+
+                return;
+            }
+            else {
+                radioSelecionado.dataset.wasChecked = true;
+            }
+        }
+
+        let radiosNoCard = card.querySelectorAll('input[type="radio"]')
+        radiosNoCard.forEach(r => {
+            if (r !== radioSelecionado) delete r.dataset.wasChecked;
+        });
+
         resetarTodosCards(card);
 
         let lista_checkboxes = card.querySelector('.tipo2-extensao');
@@ -23,15 +57,12 @@ for (let i = 0; i < botoes_opcao.length; i++) {
             liberarCheckboxes(card)
         }
         else {
-            console.log("Não tinha checkboxes")
             let botao = card.querySelector('button')
             liberarBotaoCarrinho(botao);
         }
 
     })
 }
-const carrinho_oraculo = document.getElementById('carrinho_oraculo');
-const carrinho_abcaminho = document.getElementById('carrinho_abcaminho');
 
 //Função que libera o botão de carrinho a ser clicado. Recebe como parâmetro o tipo do carrinho de cada card a ser liberado.
 function liberarBotaoCarrinho(botao) {
@@ -106,6 +137,8 @@ function validaCheckbox(tipo_checkbox, tipo_carrinho) {
 //Função onde controla as opções. Se tiver todas marcadas, troca automaticamente para "Combo". Caso não, permance em "Unidade".
 //Recebe como função o tipo de checkbox de um card e duas opções. Opcao1 sempre se refere a opção unidade. Opcao2 sempre se refere ao combo.
 function trocaOpcao(tipo_checkbox, opcao1, opcao2) {
+
+    
     //Verifica se tem alguma checkbox não marcada
     const checarNaoMarcado = Array.from(tipo_checkbox).some(cb => cb.checked === false);
 
@@ -175,7 +208,6 @@ function ocultarCarrinho() {
     aba_carrinho.classList.remove('mostrar-carrinho');
     aba_carrinho.classList.add('ocultar-carrinho');
 }
-
 
 const carrinho = [];
 const lista_carrinho = document.getElementById('lista-carrinho');

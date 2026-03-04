@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -83,7 +84,8 @@ html {
     top: 10px;
     right: -500px;
     background-color: #673B6B;
-    width: 500px;
+    width: 90vw;
+    max-width: 500px;
     height: 570px;
     padding: 15px;
     resize: both;
@@ -305,7 +307,6 @@ html {
 }
 
 .consulta-imagem {
-    border: 1px solid red;
     width: 130px;
     height: 130px;
     border-radius: 50%;
