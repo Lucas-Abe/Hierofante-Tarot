@@ -21,7 +21,6 @@ html {
     z-index: 5;
     position: sticky;
     top: 0;
-    border: 1px solid red;
 }
 
 #logo {
@@ -190,7 +189,6 @@ html {
     justify-content: center;
     /*background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 40%, #101c2c 10%);*/
     background: rgba(16, 28, 44, 0.9);
-    max-width: 1433px;
     /*height: 485px;*/
     height: 400px;
 }
@@ -317,9 +315,13 @@ html {
 }
 
 .carousel-descricao {
-    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
     margin-left: 15%;
     margin-top: 2%;
+    font-size: 0.9em;
 }
 
 .carousel-descricao li {
@@ -330,6 +332,8 @@ html {
 .carousel-control-next-icon {
     border-radius: 50%;
     background-color: #35343a;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .carousel-control-prev-icon::before,
@@ -343,8 +347,8 @@ html {
 }
 
 .carousel-indicators [data-bs-target] {
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     margin: 0 6px;
 }
