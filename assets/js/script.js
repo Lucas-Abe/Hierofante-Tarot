@@ -354,7 +354,7 @@ function enviarMensagemWhatsApp() {
     let mensagem = [];
 
     for (let i = 0; i < carrinho.length; i++) {
-        mensagem.push(carrinho[i].quantidade + "x " + carrinho[i].descricao);
+        mensagem.push(carrinho[i].quantidade + "x " + carrinho[i].descricao + " - R$" + carrinho[i].preco);
     }
     let mensagemFormatada = mensagem.join("\n");
 
