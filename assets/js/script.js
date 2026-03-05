@@ -134,7 +134,7 @@ function validaCheckbox(tipo_checkbox, tipo_carrinho) {
 //Função onde controla as opções. Se tiver todas marcadas, troca automaticamente para "Combo". Caso não, permance em "Unidade".
 //Recebe como função o tipo de checkbox de um card e duas opções. Opcao1 sempre se refere a opção unidade. Opcao2 sempre se refere ao combo.
 function trocaOpcao(tipo_checkbox, opcao1, opcao2) {
-    
+
     //Verifica se tem alguma checkbox não marcada
     const checarNaoMarcado = Array.from(tipo_checkbox).some(cb => cb.checked === false);
 
@@ -222,11 +222,40 @@ function adicionarAoCarrinho(botao) {
 
     const titulo = opcao.querySelector('h4').innerText;
 
+    let preco = 0;
+
     const radioSelecionado = opcao.querySelector('input[type="radio"]:checked');
+
+    const checkboxesMarcados = opcao.querySelectorAll('input[type="checkbox"]:checked');
+
+    if (botao.dataset.preco) {
+        preco = parseFloat(botao.dataset.preco);
+    }
+    else {
+        if (radioSelecionado) {
+            const tipo = radioSelecionado.dataset.tipo
+
+            if (radioSelecionado.dataset.preco) {
+                preco = parseFloat(radioSelecionado.dataset.preco);
+            }
+            else if (tipo === 'unidade') {
+                const precoCada = parseFloat(radioSelecionado.dataset.precoCada);
+                const precoMax = parseFloat(radioSelecionado.dataset.precoMax);
+
+                preco = precoCada * checkboxesMarcados.length;
+
+                if (preco > precoMax) {
+                    preco = precoMax;
+                }
+            }
+        }
+
+    }
 
     let descricaoFinal = {
         descricao: titulo,
-        quantidade: 1
+        quantidade: 1,
+        preco: preco
     }
 
     if (radioSelecionado) {
@@ -237,8 +266,6 @@ function adicionarAoCarrinho(botao) {
             descricaoFinal.descricao += ' - ' + textoRadio + ' ';
         }
     }
-
-    const checkboxesMarcados = opcao.querySelectorAll('input[type="checkbox"]:checked');
 
     if (checkboxesMarcados.length > 0) {
         descricaoFinal.descricao += ' (';
@@ -291,7 +318,9 @@ function atualizarCarrinho() {
 
         const li = document.createElement('li');
         let texto = document.createElement('span');
-        texto.innerText = carrinho[i].quantidade + 'x ' + carrinho[i].descricao;
+        texto.innerText = carrinho[i].quantidade + 'x '
+            + carrinho[i].descricao
+            + ' - R$' + carrinho[i].preco;
 
         botaoMenos.onclick = function () {
             carrinho[i].quantidade--;
@@ -336,7 +365,7 @@ function enviarMensagemWhatsApp() {
         console.log(mensagemFormatada)
         console.log('---')
         mensagemFormatada = `Olá! Vim do seu site, a seguir estão os itens que escolhi:
-${mensagemFormatada}`;
+    ${mensagemFormatada}`;
         console.log(mensagemFormatada)
 
         const url = `https://wa.me/${numero_celular}?text=${encodeURIComponent(mensagemFormatada)}`;
