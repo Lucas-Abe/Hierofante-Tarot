@@ -213,6 +213,8 @@ html {
 #texto-apresentacao {
     width: 80%;
     padding: 5px;
+    position: relative;
+    margin-left: 5%;
 }
 
 #texto-apresentacao h1 {
@@ -361,9 +363,10 @@ html {
 
 #terceira-secao {
     margin-bottom: 20px;
+    border: 1px solid red;
 }
 
-.consultas-descricao {
+#titulo-consulta{
     margin-left: 15%;
     margin-top: 5%;
 }
@@ -372,7 +375,9 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
+    border: 1px solid blue;
 }
 
 .consulta-tipo {
