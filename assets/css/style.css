@@ -138,6 +138,11 @@ html {
     -ms-overflow-style: none; 
 }
 
+#container-lista-carrinho span{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
 #container-lista-carrinho::-webkit-scrollbar {
     display: none; 
 }

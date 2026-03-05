@@ -82,16 +82,13 @@ function liberarCheckboxes(card) {
     libera_lista.classList.add('ativo');
 
     let lista_opcoes = card.querySelectorAll('.tipo2-opcao input');
-    console.log(lista_opcoes.length)
 
     if (valor_radio === "unidade") {
-        console.log("Contém unidade")
         for (let i = 0; i < lista_opcoes.length; i++) {
             lista_opcoes[i].checked = false;
         }
     }
     else {
-        console.log("Contém combo")
         for (let i = 0; i < lista_opcoes.length; i++) {
             lista_opcoes[i].checked = true;
         }
@@ -137,7 +134,6 @@ function validaCheckbox(tipo_checkbox, tipo_carrinho) {
 //Função onde controla as opções. Se tiver todas marcadas, troca automaticamente para "Combo". Caso não, permance em "Unidade".
 //Recebe como função o tipo de checkbox de um card e duas opções. Opcao1 sempre se refere a opção unidade. Opcao2 sempre se refere ao combo.
 function trocaOpcao(tipo_checkbox, opcao1, opcao2) {
-
     
     //Verifica se tem alguma checkbox não marcada
     const checarNaoMarcado = Array.from(tipo_checkbox).some(cb => cb.checked === false);
@@ -318,4 +314,32 @@ function atualizarCarrinho() {
         lista_carrinho.append(li);
     }
 
+}
+
+const botao_enviar_mensagem = document.querySelector('#botao-carrinho');
+botao_enviar_mensagem.addEventListener('click', enviarMensagemWhatsApp)
+
+function enviarMensagemWhatsApp() {
+    const numero_celular = "5561981825914";
+
+    let mensagem = [];
+
+    for (let i = 0; i < carrinho.length; i++) {
+        mensagem.push(carrinho[i].quantidade + "x " + carrinho[i].descricao);
+    }
+    let mensagemFormatada = mensagem.join("\n");
+
+    if (mensagemFormatada === '') {
+        alert("Por favor, coloque itens no carrinho antes de apertar o botão!");
+    }
+    else {
+        console.log(mensagemFormatada)
+        console.log('---')
+        mensagemFormatada = `Olá! Vim do seu site, a seguir estão os itens que escolhi:
+${mensagemFormatada}`;
+        console.log(mensagemFormatada)
+
+        const url = `https://wa.me/${numero_celular}?text=${encodeURIComponent(mensagemFormatada)}`;
+        window.open(url, '_blank').focus();
+    }
 }
