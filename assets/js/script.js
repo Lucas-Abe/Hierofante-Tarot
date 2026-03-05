@@ -365,7 +365,7 @@ function enviarMensagemWhatsApp() {
         console.log(mensagemFormatada)
         console.log('---')
         mensagemFormatada = `Olá! Vim do seu site, a seguir estão os itens que escolhi:
-    ${mensagemFormatada}`;
+${mensagemFormatada}`;
         console.log(mensagemFormatada)
 
         const url = `https://wa.me/${numero_celular}?text=${encodeURIComponent(mensagemFormatada)}`;
