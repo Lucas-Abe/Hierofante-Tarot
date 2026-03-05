@@ -71,6 +71,7 @@ function liberarBotaoCarrinho(botao) {
     botao.classList.add('botao-ativo');
 }
 
+//Função responsável para liberar a lista de checkboxes e validar situações que pode ou não ativar a opção Unidade ou Combo
 function liberarCheckboxes(card) {
     let radioSelecionado = card.querySelector('input[type="radio"]:checked')
 
