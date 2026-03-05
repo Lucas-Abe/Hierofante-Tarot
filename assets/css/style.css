@@ -326,6 +326,11 @@ html {
     font-size: 0.9em;
 }
 
+.carousel-descricao ul{
+    margin-right: 30px;
+    padding-left: 20px;
+}
+
 .carousel-descricao li {
     margin-top: 10px;
 }
@@ -573,17 +578,25 @@ h5 {
 }
 
 #contato-container {
-    max-width: 1200px;
     margin: 0 auto;
     padding-top: 2%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
+.contato{
+    padding: 3px;
+    padding-top: 5px;
+}
+
 .contato h5 {
+    font-size: 1em;
     text-transform: uppercase;
+    text-decoration: underline;
     margin-bottom: 5px;
+    padding: 3px;
 }
 
 .contato a {
