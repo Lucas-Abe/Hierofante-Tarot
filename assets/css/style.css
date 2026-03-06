@@ -14,11 +14,14 @@ body,
 html {
     background-color: #9B8FD1;
     color: white;
-    font-family:'Roboto-Black', 'Roboto', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto-Black', 'Roboto', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     font-weight: 400;
 }
 
-h1, h4, h5, h6{
+h1,
+h4,
+h5,
+h6 {
     font-weight: 500;
 }
 
