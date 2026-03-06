@@ -1,4 +1,4 @@
-﻿# Hierofante-Tarot
+﻿# Hieromundo-Tarot
 
 Meu primeiro grande projeto!
 Site simples criado com HTML, CSS, Bootstrap e JavaScript. 
@@ -9,5 +9,6 @@ O site consiste em diversos cards de diferentes escolhas. Após a escolha do usu
 Quando o usuário decidir quais itens escolher, pode usar o botão de Adicionar ao Carrinho para mandar uma mensagem personalizada no WhatsApp.
 
 Adicionei responsividade para diferentes dispositivos, desde celulares até computadores de alta resolução.
+
 
 Você pode acessar o site [por aqui!](https://lucas-abe.github.io/Hierofante-Tarot/)
