@@ -10,4 +10,4 @@ Quando o usuário decidir quais itens escolher, pode usar o botão de Adicionar 
 
 Adicionei responsividade para diferentes dispositivos, desde celulares até computadores de alta resolução.
 
-Você pode acessar o site através desse link: [text](https://lucas-abe.github.io/Hierofante-Tarot/)
+Você pode acessar o site [por aqui!](https://lucas-abe.github.io/Hierofante-Tarot/)
