@@ -339,7 +339,7 @@ function atualizarCarrinho() {
         }
 
 
-        li.append(botaoMenos,  texto, ' ', botaoMais);
+        li.append(botaoMenos, texto, ' ', botaoMais);
 
 
         lista_carrinho.append(li);

@@ -780,9 +780,9 @@ footer #copyright span {
     }
 
     #logo-texto {
-    padding: 5px;
-    letter-spacing: 0.5px;
-}
+        padding: 5px;
+        letter-spacing: 0.5px;
+    }
 
 }
 
@@ -846,7 +846,7 @@ footer #copyright span {
 
 }
 
-@media(min-width: 1399.98px){
+@media(min-width: 1399.98px) {
 
     #image-descricao {
         background-position: 0 0 0px 50px;
@@ -859,7 +859,7 @@ footer #copyright span {
         font-size: 1em;
     }
 
-    #container-site{
+    #container-site {
         max-width: 1400px;
         margin: auto;
     }
