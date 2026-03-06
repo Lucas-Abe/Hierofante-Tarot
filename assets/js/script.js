@@ -341,7 +341,6 @@ function atualizarCarrinho() {
 
         li.append(botaoMenos,  texto, ' ', botaoMais);
 
-        li.style.fontSize = "0.8em";
 
         lista_carrinho.append(li);
     }
