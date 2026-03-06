@@ -719,10 +719,8 @@ footer #copyright span {
     }
 
     #logo-img {
-        border-radius: 100%;
         width: 100px;
         height: 100px;
-        border: 1px solid black;
     }
 
     #aba-carrinho {
@@ -776,6 +774,16 @@ footer #copyright span {
         top: 5px
     }
 
+    #logo-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #logo-texto {
+    padding: 5px;
+    letter-spacing: 0.5px;
+}
+
 }
 
 @media(min-width: 1199.98px) {
@@ -828,6 +836,8 @@ footer #copyright span {
         width: 50%;
         padding-right: 100px;
         font-size: 1em;
+        position: relative;
+        top: -40px;
     }
 
     #aba-carrinho {
@@ -837,5 +847,21 @@ footer #copyright span {
 }
 
 @media(min-width: 1399.98px){
-    
+
+    #image-descricao {
+        background-position: 0 0 0px 50px;
+        width: 70%;
+    }
+
+    #texto-apresentacao {
+        width: 55%;
+        padding-right: 250px;
+        font-size: 1em;
+    }
+
+    #container-site{
+        max-width: 1400px;
+        margin: auto;
+    }
+
 }
