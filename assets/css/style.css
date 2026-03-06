@@ -583,7 +583,7 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .contato{
@@ -611,18 +611,23 @@ h5 {
 
 footer #copyright {
     margin-top: 20px;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
 }
 
 footer #copyright span {
-    border-top: 3px solid lightslategrey;
     padding-top: 5px;
 }
 
 /*Media Queries*/
 
-@media(min-width: 320px) {}
+@media(min-width: 425px) {
+
+    #primeira-secao, #segunda-secao{
+        height: 350px;
+    }
+
+}
 
 @media (min-width: 575.98px) {
 
